@@ -70,7 +70,7 @@ void proc_main_task(void) {
             // Lỗi: line lost
             if (!is_alerting) {
                 char msg[160];
-                snprintf(msg, sizeof(msg), "⚠️ Cảnh báo: Thiết bị đang có hiện tượng mất dòng đột ngột! (%.3fA)", iA);
+                snprintf(msg, sizeof(msg), "Canh bao: Mat dong dot ngot! (%.3fA)", iA);
                 send_sms_text(ADMIN_PHONE, msg);
                 // Nếu nghiêm trọng, gọi
                 do_call(ADMIN_PHONE);
@@ -80,7 +80,7 @@ void proc_main_task(void) {
             // recovery
             if (is_alerting) {
                 char msg[160];
-                snprintf(msg, sizeof(msg), "✅ Thông báo: Dòng đã hồi phục (%.3fA)", iA);
+                snprintf(msg, sizeof(msg), "Thong bao: Dong da hoi phuc (%.3fA)", iA);
                 send_sms_text(ADMIN_PHONE, msg);
                 is_alerting = 0;
             }
