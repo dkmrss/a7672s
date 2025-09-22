@@ -9,7 +9,7 @@
 #include <string.h>
 #include <stdio.h>
 
-#define ADMIN_PHONE      "+84123456789"   // số admin, thay bằng số thật
+#define ADMIN_PHONE      "+84917868070"   // số admin, thay bằng số thật
 #define SAMPLE_COUNT     50
 #define ADC_MAX          4095.0
 #define VREF             3.3
@@ -18,13 +18,12 @@
 #define THRESHOLD_FAULT_A 0.5   // ngưỡng lỗi (A) - chỉnh theo yêu cầu
 #define HYSTERESIS_A      0.1
 
-// GPIO pin mapping (cần map đúng theo datasheet / schematic)
-#define PIN_OUTPUT1    PINNAME_GPIO1
-#define PIN_INPUT1     PINNAME_GPIO2
-#define PIN_RESET      PINNAME_GPIO3
-#define PIN_EN_CHARGE  PINNAME_GPIO4
-#define PIN_PW_DET     PINNAME_GPIO5
-#define ADC_PIN        ADC_CH0         // ví dụ
+#define PIN_INPUT1      PINNAME_GPIO5     // CELL_IO5
+#define PIN_OUTPUT1     PINNAME_GPIO13    // CELL_IO13
+#define PIN_RESET       PINNAME_GPIO18    // CELL_IO18
+#define PIN_EN_CHARGE   PINNAME_GPIO17    // CELL_IO17
+#define PIN_PW_DET      PINNAME_GPIO8     // CELL_IO8
+#define ADC_PIN         ADC_CH0           // ADC kênh 0
 
 static int is_alerting = 0;
 
